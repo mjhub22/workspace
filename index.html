@@ -1,0 +1,136 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <!-- Linking CSS (Style) -->
+    <link rel="stylesheet" href="main.css">
+    <!-- Linking Sticky Note Functionality (Java Script) -->
+    <script src="main.js" defer></script>
+    <style>
+      .dropbtn {
+        background-color: #37373768;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content a:hover {background-color: #f1f1f1}
+      
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .dropdown:hover .dropbtn {
+        background-color: #009dff;
+      }
+      </style>
+</head>
+<body>
+<!-- Dropdown Links -->
+<nav>
+  <ul>
+    <p>Behavioral Health Workspace &#9997;</p>
+    <div class="dropdown">
+      <button class="dropbtn">Commonly Used Links</button>
+      <div class="dropdown-content">
+      <a href="https://orange.networkofcare.org/pr/services/index.aspx" target="_blank" rel="noopener">OC HCA</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      </div>  
+  </ul>
+</nav>
+  </div>  
+  </body>
+  </html>
+</dropdownlinks>
+<!-- Sticky Notes App -->
+<div id="app">
+  <br>
+    <textarea class="note">Some sample text</textarea>
+    <button class="add-note" type="button">+</button>
+  </div>
+
+<!-- Documentation Section -->
+<!-- NOTES SECTION -->
+<br>
+<br>
+<ul>
+<h5>
+  <form action="results.html" method="GET" enctype="multipart/form-data">
+  <div>
+    <label for="phone">Call Back Phone Number</label>
+    <input type="tel" name="phone" id="phone" required>
+  </div>
+  <br>
+  <div>
+    <label for="name">Caller's Name</label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <br>
+  <div>
+    <label for="name">What is your relationship to the mbr?</label>
+    <input type="text" name="name" id="name" required>
+  </div>
+  <br>
+  <div>
+    Do you (the member) have any thoughts of harming yourself or others at this time?
+  <div>
+      <label for="No">No thoughts of harm to self or others</label>
+      <input type="checkbox" name="No" id="No">
+  </div>
+  <div>
+      <label for="Yes - DTS">Yes - Self harm</label>
+      <input type="checkbox" name="Yes - DTS" id="Yes - DTS">
+  </div>
+  <div>
+      <label for="Yes - DTO">Yes - Harm to others</label>
+      <input type="checkbox" name="Yes - DTO" id="Yes - DTO">
+  </div>
+  <div>
+      <label for="Yes - DTS & DTO">Yes - Harm to self and others</label>
+      <input type="checkbox" name="Yes - DTS & DTO" id="Yes - DTS & DTO">
+  </div>
+  </div>
+  <br>
+  <div>
+      <label> Inquiry Documentation </label> 
+      <br>
+      <textarea id="Notes" name="Notes"> Paste Template Here </textarea>
+  </div>
+  <label> Dissatisfaction Documentation </label> 
+  <br>
+  <textarea id="Notes" name="Notes"> Paste Template Here </textarea>
+</div>
+  <br>
+<button type="reset">Reset</button>
+<button type="submit">Done</button>
+</form>
+</h5>
+</body>
+</ul>
+</html>
