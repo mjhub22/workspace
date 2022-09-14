@@ -3,9 +3,14 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Sticky Notes</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Linking CSS (Style) -->
     <link rel="stylesheet" href="main.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- End of Fonts -->
     <!-- Linking Sticky Note Functionality (Java Script) -->
     <script src="main.js" defer></script>
     <style>
@@ -54,7 +59,7 @@
 <!-- Dropdown Links -->
 <nav>
   <ul>
-    <p>Behavioral Health Workspace &#9997;</p>
+    <h1>Behavioral Health Workspace &#9997;</h1>
     <div class="dropdown">
       <button class="dropbtn">Commonly Used Links</button>
       <div class="dropdown-content">
@@ -68,69 +73,89 @@
   </body>
   </html>
 </dropdownlinks>
-<!-- Sticky Notes App -->
+<!-- STICKY NOTES APP -->
+<ul>
 <div id="app">
-  <br>
+    <p> Double-click a note to delete a quick note.</p>
     <textarea class="note">Some sample text</textarea>
     <button class="add-note" type="button">+</button>
   </div>
-
-<!-- Documentation Section -->
-<!-- NOTES SECTION -->
-<br>
-<br>
-<ul>
-<h5>
-  <form action="results.html" method="GET" enctype="multipart/form-data">
-  <div>
-    <label for="phone">Call Back Phone Number</label>
-    <input type="tel" name="phone" id="phone" required>
-  </div>
-  <br>
-  <div>
-    <label for="name">Caller's Name</label>
-    <input type="text" name="name" id="name" required>
-  </div>
-  <br>
-  <div>
-    <label for="name">What is your relationship to the mbr?</label>
-    <input type="text" name="name" id="name" required>
-  </div>
-  <br>
-  <div>
-    Do you (the member) have any thoughts of harming yourself or others at this time?
-  <div>
-      <label for="No">No thoughts of harm to self or others</label>
-      <input type="checkbox" name="No" id="No">
-  </div>
-  <div>
-      <label for="Yes - DTS">Yes - Self harm</label>
-      <input type="checkbox" name="Yes - DTS" id="Yes - DTS">
-  </div>
-  <div>
-      <label for="Yes - DTO">Yes - Harm to others</label>
-      <input type="checkbox" name="Yes - DTO" id="Yes - DTO">
-  </div>
-  <div>
-      <label for="Yes - DTS & DTO">Yes - Harm to self and others</label>
-      <input type="checkbox" name="Yes - DTS & DTO" id="Yes - DTS & DTO">
-  </div>
-  </div>
-  <br>
-  <div>
-      <label> Inquiry Documentation </label> 
-      <br>
-      <textarea id="Notes" name="Notes"> Paste Template Here </textarea>
-  </div>
-  <label> Dissatisfaction Documentation </label> 
-  <br>
-  <textarea id="Notes" name="Notes"> Paste Template Here </textarea>
-</div>
-  <br>
-<button type="reset">Reset</button>
-<button type="submit">Done</button>
-</form>
-</h5>
-</body>
 </ul>
+<ul>
+  <!-- TEMPLATE NOTES NAV BAR -->
+  <hgroup>
+  <body>
+    <div class="w3-container">
+    <h5>Template Notes &#128204;</h5>
+      <button class="w3-bar-item w3-button" onclick="openCity('OP_MH')">Outpatient MH</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+      <button class="w3-bar-item w3-button" onclick="openCity('CA')">CA</button>
+    </div>
+    <!-- Outpatient Mental Health Template -->
+    <div id="OP_MH" class="w3-container city">
+        <form action="results.html" target="_blank" rel="noopener" method="GET" enctype="multipart/form-data">
+        <div>
+          <p><label>Call Back Phone Number</label>
+            <input class="w3-input w3-border" name="Call Back Phone Number" type="tel" required></p> 
+          <p><label>Callers Name</label>
+            <input class="w3-input w3-border" name="Callers Name" type="text" required></p>
+          <p><label for="name">What is your relationship to the mbr?</label>
+            <input class="w3-input w3-border" name="What is your relationship to the mbr?" type="text" required></p>
+          <p><label>Members Name</label>
+            <input class="w3-input w3-border" name="Members Name" type="text" required></p>
+          </div>
+        <div>
+          Do you (the member) have any thoughts of harming yourself or others at this time?
+          </div>
+        <div>
+          <input type="radio" id="Yes - Danger To Self" name="Does the mbr have any thoughts of harming self or others at this time?" value="Yes - Danger To Self">
+          <label for="Yes - Danger To Self">Yes - Danger To Self</label><br>
+          <input type="radio" id="Yes - Danger To Others" name="Does the mbr have any thoughts of harming self or others at this time?" value="Yes - Danger To Others">
+          <label for="Yes - Danger To Others">Yes - Danger To Others</label><br>
+          <input type="radio" id="Yes - DTS & DTO" name="Does the mbr have any thoughts of harming self or others at this time?" value="Yes - DTS & DTO">
+          <label for="Yes - DTS & DTO">Yes - DTS & DTO</label><br>
+          <input type="radio" id="No thoughts of harming self or others at this time." name="Does the mbr have any thoughts of harming self or others at this time?" value="No thoughts of harming self or others at this time.">
+          <label for="No thoughts of harming self or others at this time.">No thoughts of harming self or others at this time.</label>
+        </div>
+        <br>
+        <div>
+            <label> Summary of the inquiry and education provided: </label> 
+            <br>
+            <textarea id="Notes" name="Notes">  </textarea>
+        </div>
+        <br>
+      <button type="reset">Reset</button>
+      <button type="submit">Done</button>
+      </form>
+    </body>
+    </div>
+    <!-- ABA Template -->
+    <div id="Paris" class="w3-container city" style="display:none">
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p> 
+    </div>
+    
+    <div id="Tokyo" class="w3-container city" style="display:none">
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <div id="CA" class="w3-container city" style="display:none">
+      <h2>CA</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+    
+    <script>
+    function openCity(cityName) {
+      var i;
+      var x = document.getElementsByClassName("city");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      document.getElementById(cityName).style.display = "block";  
+    }
+    </script>
+    </hgroup>
+</ul>
+  </body>
 </html>
